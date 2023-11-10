@@ -1,0 +1,72 @@
+   /* Estilos generales */
+   body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpaperbat.com%2Fimg%2F470908-4k-nvidia-wallpaper.jpg&f=1&nofb=1&ipt=2b1451d65c6b75adf261cd4c96fe758b4f4641b8d73560c53f780e0d2cfa211e&ipo=images");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+    /* Estilos del encabezado */
+       /* Estilos del encabezado */
+       header {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    header h1 {
+        margin: 0;
+    }
+
+/* Estilos del contenido */
+.content {
+    
+}
+
+
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 0;
+    }
+}
+
+ /* Estilos de la navbar */
+ .navbar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    color: #fff;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.navbar a {
+    padding: 15px 25px;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+}
+
+ a:hover {
+    background-color: #555;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Contenido principal */
+.main-content {
+    margin-left: 250px; /* Ancho de la navbar */
+    padding: 20px;
+}
